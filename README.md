@@ -20,4 +20,5 @@ At the moment it's basically just a mockup done for fun, getting to know SwiftUI
 - [ ] Implement proper UI
 - [ ] Implement an API router
 - [ ] Add Authentication + User Profile
+- [ ] MacOS / iPadOS support 
 
