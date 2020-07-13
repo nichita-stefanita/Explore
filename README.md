@@ -7,6 +7,7 @@ At the moment it's basically just a mockup done for fun, getting to know SwiftUI
 
 ## 🚀 Getting Started
 1. Clone the repository.
+2. Wait for Swift package manager fetch.
 
 ## 🛠 Setup
 
