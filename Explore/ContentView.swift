@@ -6,10 +6,24 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var randomImages = UnsplashData()
+    
     var body: some View {
-        Text("Hello, world!").padding()
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                ForEach(randomImages.photoArray, id: \.id) { photo in 
+                    WebImage(url: URL(string: photo.urls["thumb"]!))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width - 40, height: 200, alignment: .center)
+                }
+            }
+            .padding()
+        }
     }
 }
 

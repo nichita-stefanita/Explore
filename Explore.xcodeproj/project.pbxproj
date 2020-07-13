@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		19565A9F24BBAF8800677B76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19565A9E24BBAF8800677B76 /* ContentView.swift */; };
 		19565AA124BBAF8B00677B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19565AA024BBAF8B00677B76 /* Assets.xcassets */; };
 		19565AA424BBAF8B00677B76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19565AA324BBAF8B00677B76 /* Preview Assets.xcassets */; };
+		19565AAD24BC929500677B76 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19565AAC24BC929500677B76 /* Photo.swift */; };
+		19565AB024BC9BFE00677B76 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 19565AAF24BC9BFE00677B76 /* SDWebImageSwiftUI */; };
+		19565AB224BCB65000677B76 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19565AB124BCB65000677B76 /* Config.swift */; };
+		19565AB424BCDBFB00677B76 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19565AB324BCDBFB00677B76 /* ImageGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		19565AA024BBAF8B00677B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19565AA324BBAF8B00677B76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19565AA524BBAF8B00677B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19565AAC24BC929500677B76 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		19565AB124BCB65000677B76 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		19565AB324BCDBFB00677B76 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19565AB024BC9BFE00677B76 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +62,9 @@
 			children = (
 				19565A9C24BBAF8800677B76 /* ExploreApp.swift */,
 				19565A9E24BBAF8800677B76 /* ContentView.swift */,
+				19565AB324BCDBFB00677B76 /* ImageGridView.swift */,
+				19565AB124BCB65000677B76 /* Config.swift */,
+				19565AAB24BC927D00677B76 /* Model */,
 				19565AA024BBAF8B00677B76 /* Assets.xcassets */,
 				19565AA524BBAF8B00677B76 /* Info.plist */,
 				19565AA224BBAF8B00677B76 /* Preview Content */,
@@ -67,6 +78,14 @@
 				19565AA324BBAF8B00677B76 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19565AAB24BC927D00677B76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19565AAC24BC929500677B76 /* Photo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +104,9 @@
 			dependencies = (
 			);
 			name = Explore;
+			packageProductDependencies = (
+				19565AAF24BC9BFE00677B76 /* SDWebImageSwiftUI */,
+			);
 			productName = Explore;
 			productReference = 19565A9924BBAF8800677B76 /* Explore.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 19565A9024BBAF8800677B76;
+			packageReferences = (
+				19565AAE24BC9BFE00677B76 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 19565A9A24BBAF8800677B76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19565AB424BCDBFB00677B76 /* ImageGridView.swift in Sources */,
+				19565AAD24BC929500677B76 /* Photo.swift in Sources */,
+				19565AB224BCB65000677B76 /* Config.swift in Sources */,
 				19565A9F24BBAF8800677B76 /* ContentView.swift in Sources */,
 				19565A9D24BBAF8800677B76 /* ExploreApp.swift in Sources */,
 			);
@@ -328,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		19565AAE24BC9BFE00677B76 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19565AAF24BC9BFE00677B76 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19565AAE24BC9BFE00677B76 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 19565A9124BBAF8800677B76 /* Project object */;
 }
