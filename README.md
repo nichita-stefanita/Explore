@@ -3,6 +3,7 @@
 
 ## About
 Explore is application for iOS. Built with SwiftUI and Unsplash API. Dependencies are managed through Swift package manager. 
+At the moment it's basically just a mockup done for fun, getting to know SwiftUI.
 
 ## 🚀 Getting Started
 1. Clone the repository.
